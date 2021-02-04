@@ -3,6 +3,7 @@ import React from "react";
 
 // Custom Components
 import home1 from "../img/home1.jpg";
+
 // Function
 function AboutSection() {
   return (
