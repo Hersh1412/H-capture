@@ -15,6 +15,7 @@ export const StyledDescription = styled.div`
   flex: 1;
   padding-right: 3rem;
   h2 {
+    font-size: 3rem;
     font-weight: lighter;
   }
 `;
