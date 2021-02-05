@@ -1,12 +1,13 @@
 import React from "react";
 
 // User Components
+import GlobalStyle from "./components/GlobalStyle";
 import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
     <div className="App">
-      <h1>H-cap</h1>
+      <GlobalStyle />
       <AboutUs />
     </div>
   );
