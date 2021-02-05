@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 // User Components
 import GlobalStyle from "./components/GlobalStyle";
+import MovieDetail from "./components/MovieDetail";
 import Nav from "./components/Nav";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
@@ -16,13 +17,16 @@ function App() {
         <Route path="/" exact>
           <AboutUs />
         </Route>
-        <Route path="/work">
+        <Route path="/work" exact>
           <OurWork />
         </Route>
         <Route path="/contactus">
           <ContactUs />
         </Route>
       </Switch>
+      <Route path="/work/:id">
+        <MovieDetail />
+      </Route>
     </div>
   );
 }

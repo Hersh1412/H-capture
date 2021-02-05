@@ -15,21 +15,21 @@ function OurWork() {
       <StyledMovie>
         <h1>The Athlete</h1>
         <div className="line"></div>
-        <Link>
+        <Link to="/work/the-athlete">
           <img src={athlete} alt="athlete" />
         </Link>
       </StyledMovie>
       <StyledMovie>
         <h1>The Racer</h1>
         <div className="line"></div>
-        <Link>
+        <Link to="/work/the-racer">
           <img src={theracer} alt="the racer" />
         </Link>
       </StyledMovie>
       <StyledMovie>
         <h1>Good Times</h1>
         <div className="line"></div>
-        <Link>
+        <Link to="/work/good-times">
           <img src={goodtimes} alt="Good Times" />
         </Link>
       </StyledMovie>
