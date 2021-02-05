@@ -2,8 +2,13 @@
 import React from "react";
 import styled from "styled-components";
 // Custom Components
-import home1 from "../img/home1.jpg";
-
+import home1 from "../img/home1.png";
+import {
+  StyledAbout,
+  StyledDescription,
+  StyledHide,
+  StyledImageDiv,
+} from "../Styles";
 // Function
 function AboutSection() {
   return (
@@ -36,37 +41,5 @@ function AboutSection() {
 }
 
 // styled component
-
-const StyledAbout = styled.div`
-  min-height: 90vh;
-  display: flex;
-  // flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 7rem;
-  color: white;
-`;
-
-const StyledDescription = styled.div`
-  flex: 1;
-  padding-right: 3rem;
-  h2 {
-    font-weight: lighter;
-  }
-`;
-
-const StyledImageDiv = styled.div`
-  flex: 1;
-  overflow: hidden;
-  img {
-    width: 90%;
-    height: 80vh;
-    object-fit: cover;
-  }
-`;
-
-const StyledHide = styled.div`
-  overflow: hidden;
-`;
 
 export default AboutSection;
