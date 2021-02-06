@@ -11,11 +11,13 @@ import goodtimes from "../img/goodtimes-small.png";
 import {
   pageAnimation,
   fade,
+  fade2,
   sliderContainer,
   photoAnim,
   lineAnim,
   slider,
 } from "../animation";
+import { useScroll, useScrol } from "../components/useScroll";
 
 // Function
 const OurWork = () => {
@@ -33,6 +35,7 @@ const OurWork = () => {
         <StyledFrame3 variants={slider}></StyledFrame3>
         <StyledFrame4 variants={slider}></StyledFrame4>
       </motion.div>
+
       <StyledMovie>
         <motion.h1 variants={fade}>The Athlete</motion.h1>
         <motion.div variants={lineAnim} className="line"></motion.div>
@@ -42,6 +45,7 @@ const OurWork = () => {
           </StyledHide>
         </Link>
       </StyledMovie>
+
       <StyledMovie>
         <h1>The Racer</h1>
         <div className="line"></div>
@@ -49,6 +53,7 @@ const OurWork = () => {
           <img src={theracer} alt="the racer" />
         </Link>
       </StyledMovie>
+
       <StyledMovie>
         <h1>Good Times</h1>
         <div className="line"></div>
@@ -68,7 +73,7 @@ const StyledWork = styled(motion.div)`
     padding: 1rem 0rem;
   }
 `;
-const StyledMovie = styled.div`
+const StyledMovie = styled(motion.div)`
   padding-bottom: 8rem;
   .line {
     margin-top: 1rem;

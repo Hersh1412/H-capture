@@ -12,3 +12,15 @@ export const useScroll = (num) => {
 
   return [element, controls];
 };
+
+export const useScrol = () => {
+  const controls = useAnimation();
+  const [element, view] = useInView();
+  if (view) {
+    controls.start("show");
+  } else {
+    controls.start("hidden");
+  }
+
+  return [element, controls];
+};
