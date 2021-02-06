@@ -1,8 +1,9 @@
 // Components
 import React from "react";
-import styled from "styled-components";
+import { motion } from "framer-motion";
 // Custom Components
 import home1 from "../img/home1.png";
+import { titleAnim, fade, photoAnim } from "../animation";
 import {
   StyledAbout,
   StyledDescription,
@@ -10,35 +11,39 @@ import {
   StyledImageDiv,
 } from "../Styles";
 // Function
-function AboutSection() {
+const AboutSection = () => {
   return (
     <StyledAbout>
       <StyledDescription>
-        <div className="title">
+        <motion.div>
           <StyledHide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>true</h2>
+            <motion.h2 variants={titleAnim}>true</motion.h2>
           </StyledHide>
-        </div>
-        <p>
+        </motion.div>
+        <motion.p variants={fade}>
           Contact us for any photography or vediograpy ideas that you have. we
           would glady be intrested in your idea
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
       </StyledDescription>
       <StyledImageDiv>
-        <img src={home1} alt="guy with cam"></img>
+        <motion.img
+          variants={photoAnim}
+          src={home1}
+          alt="guy with cam"
+        ></motion.img>
       </StyledImageDiv>
     </StyledAbout>
   );
-}
+};
 
 // styled component
 

@@ -11,7 +11,7 @@ import {
 } from "../Styles";
 
 // Function
-function FaqSection() {
+const FaqSection = () => {
   return (
     <StyledFaq>
       <h2>
@@ -62,7 +62,7 @@ function FaqSection() {
       </div>
     </StyledFaq>
   );
-}
+};
 const StyledFaq = styled(StyledAbout)`
   display: block;
   span {

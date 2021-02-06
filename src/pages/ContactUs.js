@@ -1,15 +1,22 @@
 // Components
 import React from "react";
+import { motion } from "framer-motion";
 
 // Custom Components
+import { pageAnimation } from "../animation";
 
 // Function
-function ContactUs() {
+const ContactUs = () => {
   return (
-    <div>
+    <motion.div
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <h1>Contact Us</h1>
-    </div>
+    </motion.div>
   );
-}
+};
 
 export default ContactUs;

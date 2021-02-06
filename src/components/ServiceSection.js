@@ -17,7 +17,7 @@ import {
 import styled from "styled-components";
 
 // Function
-function ServiceSection() {
+const ServiceSection = () => {
   return (
     <StyledService>
       <StyledDescription>
@@ -68,7 +68,7 @@ function ServiceSection() {
       </StyledImageDiv>
     </StyledService>
   );
-}
+};
 const StyledService = styled(StyledAbout)`
   h2 {
     padding-bottom: 3rem;

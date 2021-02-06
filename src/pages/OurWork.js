@@ -2,16 +2,24 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 // Custom Components
 import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
+import { pageAnimation } from "../animation";
 
 // Function
-function OurWork() {
+const OurWork = () => {
   return (
-    <StyledWork>
+    <StyledWork
+      style={{ background: "#fff" }}
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <StyledMovie>
         <h1>The Athlete</h1>
         <div className="line"></div>
@@ -35,9 +43,9 @@ function OurWork() {
       </StyledMovie>
     </StyledWork>
   );
-}
+};
 
-const StyledWork = styled.div`
+const StyledWork = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
