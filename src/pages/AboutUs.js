@@ -7,7 +7,7 @@ import AboutSection from "../components/AboutSection";
 import FaqSection from "../components/FaqSection";
 import ServiceSection from "../components/ServiceSection";
 import { pageAnimation } from "../animation";
-
+import ScrollTop from "../components/ScrollTop";
 // Function
 const AboutUs = () => {
   return (
@@ -20,6 +20,7 @@ const AboutUs = () => {
       <AboutSection />
       <ServiceSection />
       <FaqSection />
+      <ScrollTop />
     </motion.div>
   );
 };
