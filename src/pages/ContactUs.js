@@ -7,6 +7,12 @@ import ScrollTop from "../components/ScrollTop";
 import { pageAnimation, titleAnim } from "../animation";
 import styled from "styled-components";
 
+import { BiPhoneCall } from "react-icons/bi";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
+
+import { IconContext } from "react-icons";
+
 // Function
 const ContactUs = () => {
   return (
@@ -23,26 +29,40 @@ const ContactUs = () => {
         </StyledHide>
       </StyledTitle>
       <div>
-        <StyledHide>
-          <StyledSocial variants={titleAnim}>
-            <StyledCircle />
-            <h2>Send us a Message </h2>
-          </StyledSocial>
-        </StyledHide>
+        <IconContext.Provider
+          value={{
+            color: "#23d997",
+            size: "20px",
+            className: "global-class-name",
+          }}
+        >
+          <StyledHide>
+            <StyledSocial variants={titleAnim}>
+              <StyledCircle className="icon">
+                <BiPhoneCall />
+              </StyledCircle>
+              <h2>Send us a Call </h2>
+            </StyledSocial>
+          </StyledHide>
 
-        <StyledHide>
-          <StyledSocial variants={titleAnim}>
-            <StyledCircle />
-            <h2>Send an Email </h2>
-          </StyledSocial>
-        </StyledHide>
+          <StyledHide>
+            <StyledSocial variants={titleAnim}>
+              <StyledCircle className="icon">
+                <AiOutlineMail />
+              </StyledCircle>
+              <h2>Send an Email </h2>
+            </StyledSocial>
+          </StyledHide>
 
-        <StyledHide>
-          <StyledSocial variants={titleAnim}>
-            <StyledCircle />
-            <h2>Social Media </h2>
-          </StyledSocial>
-        </StyledHide>
+          <StyledHide>
+            <StyledSocial variants={titleAnim}>
+              <StyledCircle className="icon">
+                <AiOutlineInstagram />
+              </StyledCircle>
+              <h2>Social Media </h2>
+            </StyledSocial>
+          </StyledHide>
+        </IconContext.Provider>
       </div>
       <ScrollTop />
     </StyledContact>
@@ -65,6 +85,10 @@ const StyledCircle = styled.div`
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: #353535;
 `;
 const StyledSocial = styled(motion.div)`
