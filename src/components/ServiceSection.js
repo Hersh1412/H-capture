@@ -15,11 +15,20 @@ import {
   StyledImageDiv,
 } from "../Styles";
 import styled from "styled-components";
+import { scrollRevel, fade } from "../animation";
+import { useScroll } from "./useScroll";
 
 // Function
 const ServiceSection = () => {
+  const [element, controls] = useScroll(0.5);
+
   return (
-    <StyledService>
+    <StyledService
+      variants={scrollRevel}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+    >
       <StyledDescription>
         <h2>
           high <span>quality</span> services

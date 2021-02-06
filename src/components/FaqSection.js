@@ -11,11 +11,18 @@ import {
   StyledImageDiv,
 } from "../Styles";
 import Toggle from "./Toggle";
-
+import { useScroll } from "./useScroll";
+import { scrollRevel, fade } from "../animation";
 // Function
 const FaqSection = () => {
+  const [element, controls] = useScroll(0.3);
   return (
-    <StyledFaq>
+    <StyledFaq
+      variants={scrollRevel}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+    >
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
@@ -76,6 +83,7 @@ const StyledFaq = styled(StyledAbout)`
     background: #cccccc;
     height: 0.2rem;
     margin-bottom: 2rem;
+    margin-top: 1rem;
     width: 100%;
   }
   .question {
