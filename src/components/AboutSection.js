@@ -1,8 +1,10 @@
 // Components
 import React from "react";
 import { motion } from "framer-motion";
+import styled from "styled-components";
 // Custom Components
 import home1 from "../img/home1.png";
+import Wave from "./Wave";
 import { titleAnim, fade, photoAnim } from "../animation";
 import {
   StyledAbout,
@@ -41,6 +43,7 @@ const AboutSection = () => {
           alt="guy with cam"
         ></motion.img>
       </StyledImageDiv>
+      <Wave />
     </StyledAbout>
   );
 };
